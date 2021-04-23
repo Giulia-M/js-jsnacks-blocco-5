@@ -82,7 +82,7 @@ console.log("Il gruppo di zucchine che misura meno di 15cm: ", zucchineSmall);
 var sommaZucchineSmall = 0
 var sommaZucchineLarge = 0
 
-
+/*
 for (var i = 0; i < zucchineLarge.length; i++) {
     sommaZucchineLarge += zucchineLarge[i].peso
 }
@@ -93,4 +93,18 @@ for (var i = 0; i < zucchineSmall.length; i++) {
     sommaZucchineSmall += zucchineSmall[i].peso
 }
 console.log("Il gruppo di zucchine che misura meno di 15cm ha come peso totale: ", sommaZucchineSmall, "g")
+*/
 
+function pesoTot(array) {
+    var peso = 0;
+    for (var i = 0; i < array.length; i++) {
+      peso += array[i].peso;
+    }
+    return peso;
+}
+  
+sommaZucchineSmall = pesoTot(zucchineSmall);
+sommaZucchineLarge = pesoTot(zucchineLarge);
+  
+console.log("Il gruppo di zucchine che misura meno di 15cm ha come peso totale: ", sommaZucchineSmall, "g")
+console.log("Il gruppo di zucchine che misura più di 15cm ha come peso totale: ", sommaZucchineLarge, "g")
